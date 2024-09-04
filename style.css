@@ -1,0 +1,30 @@
+@font-face {
+  font-family: Roboto;
+  src: url(Roboto.ttf);
+}
+
+body {
+  all: unset;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: #3a8660;
+  color: #fff;
+  overflow: hidden;
+}
+
+.start {
+  width: 100vw;
+  height: 100vh;
+  background-color: #3a8660;
+  color: #000;
+  z-index: 999;
+  font-family: Roboto;
+  font-weight: 400;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

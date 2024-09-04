@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Standby mode</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="clock.css" />
+    <link rel="stylesheet" href="weather.css" />
+  </head>
+  <body>
+    <div
+      style="visibility: hidden"
+      onclick="document.getElementById('start').style.visibility = 'hidden'; requestFullScreen(document.body);"
+      id="start"
+      class="start"
+    >
+      <span
+        >Turn device to horizontal mode, allow location services and tap
+        anywhere to start standby mode</span
+      >
+    </div>
+    <!-- Credits to https://codepen.io/bohai-yu on codepen for making this clock -->
+    <div class="clock-holder">
+      <div class="clock" id="utility-clock">
+        <svg
+          width="292"
+          height="291"
+          viewBox="0 0 292 291"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M130.556 4.28946C140.212 -1.12673 151.99 -1.12673 161.645 4.28946L173.983 11.2102C178.615 13.8084 183.824 15.2042 189.134 15.27L203.279 15.4452C214.349 15.5823 224.549 21.4715 230.203 30.9897L237.427 43.152C240.139 47.718 243.953 51.5313 248.519 54.2434L260.681 61.4676C270.199 67.1213 276.088 77.3217 276.225 88.3916L276.401 102.537C276.466 107.847 277.862 113.056 280.46 117.688L287.381 130.025C292.797 139.68 292.797 151.459 287.381 161.114L280.46 173.452C277.862 178.083 276.466 183.293 276.401 188.603L276.225 202.748C276.088 213.818 270.199 224.018 260.681 229.672L248.519 236.896C243.953 239.608 240.139 243.421 237.427 247.987L230.203 260.15C224.549 269.668 214.349 275.557 203.279 275.694L189.134 275.869C183.824 275.935 178.615 277.331 173.983 279.929L161.646 286.85C151.99 292.266 140.212 292.266 130.556 286.85L118.219 279.929C113.587 277.331 108.378 275.935 103.068 275.869L88.9228 275.694C77.8529 275.557 67.6525 269.668 61.9989 260.15L54.7746 247.987C52.0625 243.421 48.2492 239.608 43.6833 236.896L31.5209 229.672C22.0027 224.018 16.1135 213.818 15.9764 202.748L15.8012 188.603C15.7354 183.293 14.3397 178.083 11.7415 173.452L4.82071 161.114C-0.595482 151.459 -0.595482 139.681 4.82071 130.025L11.7415 117.688C14.3397 113.056 15.7354 107.847 15.8012 102.537L15.9764 88.3915C16.1135 77.3217 22.0027 67.1213 31.5209 61.4676L43.6833 54.2434C48.2492 51.5313 52.0625 47.718 54.7746 43.152L61.9989 30.9897C67.6525 21.4715 77.8529 15.5823 88.9228 15.4452L103.068 15.27C108.378 15.2042 113.587 13.8084 118.219 11.2102L130.556 4.28946Z"
+            fill="#E1F6E7"
+          />
+        </svg>
+        <div class="centre">
+          <div class="dynamic">
+            <div class="anchor" style="transform: rotate(6deg)">
+              <div class="element minute-line"></div>
+            </div>
+            <div class="anchor" style="transform: rotate(12deg)">
+              <div class="element minute-line"></div>
+            </div>
+            <div class="anchor" style="transform: rotate(18deg)">
+              <div class="element minute-line"></div>
+            </div>
+            <div class="anchor" style="transform: rotate(24deg)">
+              <div class="element minute-line"></div>
+            </div>
+            <div class="anchor" style="transform: rotate(30deg)">
+              <div class="element minute-line-long"></div>
+            </div>
+            <div class="anchor" style="transform: rotate(36deg)">
+              <div class="element minute-line"></div>
+            </div>
+            <div class="anchor" style="transform: rotate(42deg)">
+              <div class="element minute-line"></div>
+            </div>
+            <div class="anchor" style="transform: rotate(48deg)">
+              <div class="element minute-line"></div>
+            </div>
+            <div class="anchor" style="transform: rotate(54deg)">
+              <div class="element minute-line"></div>
+            </div>
+            <div class="anchor" style="transform: rotate(60deg)">
+              <div class="element minute-line-long"></div>
+            </div>
+            <div class="anchor" style="transform: rotate(66deg)">
+              <div class="element minute-line"></div>
+            </div>
+            <div class="anchor" style="transform: rotate(72deg)">
+              <div class="element minute-line"></div>
+            </div>
+            <div class="anchor" style="transform: rotate(78deg)">
+              <div class="element minute-line"></div>
+            </div>
+            <div class="anchor" style="transform: rotate(84deg)">
+              <div class="element minute-line"></div>
+            </div>
+            <div class="anchor" style="transform: rotate(90deg)">
+              <div class="element minute-line-long"></div>
+            </div>
+            <div class="anchor" style="transform: rotate(96deg)">
+              <div class="element minute-line"></div>
+            </div>
+            <div class="anchor" style="transform: rotate(102deg)">
+              <div class="element minute-line"></div>
+            </div>
+            <div class="anchor" style="transform: rotate(108deg)">
+              <div class="element minute-line"></div>
+            </div>
+            <div class="anchor" style="transform: rotate(114deg)">
+              <div class="element minute-line"></div>
+            </div>
+            <div class="anchor" style="transform: rotate(120deg)">
+              <div class="element minute-line-long"></div>
+            </div>
+            <div class="anchor" style="transform: rotate(126deg)">
+              <div class="element minute-line"></div>
+            </div>
+            <div class="anchor" style="transform: rotate(132deg)">
+              <div class="element minute-line"></div>
+            </div>
+            <div class="anchor" style="transform: rotate(138deg)">
+              <div class="element minute-line"></div>
+            </div>
+            <div class="anchor" style="transform: rotate(144deg)">
+              <div class="element minute-line"></div>
+            </div>
+            <div class="anchor" style="transform: rotate(150deg)">
+              <div class="element minute-line-long"></div>
+            </div>
+            <div class="anchor" style="transform: rotate(156deg)">
+              <div class="element minute-line"></div>
+            </div>
+            <div class="anchor" style="transform: rotate(162deg)">
+              <div class="element minute-line"></div>
+            </div>
+            <div class="anchor" style="transform: rotate(168deg)">
+              <div class="element minute-line"></div>
+            </div>
+            <div class="anchor" style="transform: rotate(174deg)">
+              <div class="element minute-line"></div>
+            </div>
+            <div class="anchor" style="transform: rotate(180deg)">
+              <div class="element minute-line-long"></div>
+            </div>
+            <div class="anchor" style="transform: rotate(186deg)">
+              <div class="element minute-line"></div>
+            </div>
+            <div class="anchor" style="transform: rotate(192deg)">
+              <div class="element minute-line"></div>
+            </div>
+            <div class="anchor" style="transform: rotate(198deg)">
+              <div class="element minute-line"></div>
+            </div>
+            <div class="anchor" style="transform: rotate(204deg)">
+              <div class="element minute-line"></div>
+            </div>
+            <div class="anchor" style="transform: rotate(210deg)">
+              <div class="element minute-line-long"></div>
+            </div>
+            <div class="anchor" style="transform: rotate(216deg)">
+              <div class="element minute-line"></div>
+            </div>
+            <div class="anchor" style="transform: rotate(222deg)">
+              <div class="element minute-line"></div>
+            </div>
+            <div class="anchor" style="transform: rotate(228deg)">
+              <div class="element minute-line"></div>
+            </div>
+            <div class="anchor" style="transform: rotate(234deg)">
+              <div class="element minute-line"></div>
+            </div>
+            <div class="anchor" style="transform: rotate(240deg)">
+              <div class="element minute-line-long"></div>
+            </div>
+            <div class="anchor" style="transform: rotate(246deg)">
+              <div class="element minute-line"></div>
+            </div>
+            <div class="anchor" style="transform: rotate(252deg)">
+              <div class="element minute-line"></div>
+            </div>
+            <div class="anchor" style="transform: rotate(258deg)">
+              <div class="element minute-line"></div>
+            </div>
+            <div class="anchor" style="transform: rotate(264deg)">
+              <div class="element minute-line"></div>
+            </div>
+            <div class="anchor" style="transform: rotate(270deg)">
+              <div class="element minute-line-long"></div>
+            </div>
+            <div class="anchor" style="transform: rotate(276deg)">
+              <div class="element minute-line"></div>
+            </div>
+            <div class="anchor" style="transform: rotate(282deg)">
+              <div class="element minute-line"></div>
+            </div>
+            <div class="anchor" style="transform: rotate(288deg)">
+              <div class="element minute-line"></div>
+            </div>
+            <div class="anchor" style="transform: rotate(294deg)">
+              <div class="element minute-line"></div>
+            </div>
+            <div class="anchor" style="transform: rotate(300deg)">
+              <div class="element minute-line-long"></div>
+            </div>
+            <div class="anchor" style="transform: rotate(306deg)">
+              <div class="element minute-line"></div>
+            </div>
+            <div class="anchor" style="transform: rotate(312deg)">
+              <div class="element minute-line"></div>
+            </div>
+            <div class="anchor" style="transform: rotate(318deg)">
+              <div class="element minute-line"></div>
+            </div>
+            <div class="anchor" style="transform: rotate(324deg)">
+              <div class="element minute-line"></div>
+            </div>
+            <div class="anchor" style="transform: rotate(330deg)">
+              <div class="element minute-line-long"></div>
+            </div>
+            <div class="anchor" style="transform: rotate(336deg)">
+              <div class="element minute-line"></div>
+            </div>
+            <div class="anchor" style="transform: rotate(342deg)">
+              <div class="element minute-line"></div>
+            </div>
+            <div class="anchor" style="transform: rotate(348deg)">
+              <div class="element minute-line"></div>
+            </div>
+            <div class="anchor" style="transform: rotate(354deg)">
+              <div class="element minute-line"></div>
+            </div>
+            <div class="anchor" style="transform: rotate(360deg)">
+              <div class="element minute-line-long"></div>
+            </div>
+            <div class="hour-text hour-1" style="top: -90.9px; left: 52.5px">
+              1
+            </div>
+            <div class="hour-text hour-2" style="top: -52.5px; left: 90.9px">
+              2
+            </div>
+            <div class="hour-text hour-3" style="top: 0px; left: 105px">3</div>
+            <div class="hour-text hour-4" style="top: 52.5px; left: 90.9px">
+              4
+            </div>
+            <div class="hour-text hour-5" style="top: 90.9px; left: 52.5px">
+              5
+            </div>
+            <div class="hour-text hour-6" style="top: 105px; left: 0px">6</div>
+            <div class="hour-text hour-7" style="top: 90.9px; left: -52.5px">
+              7
+            </div>
+            <div class="hour-text hour-8" style="top: 52.5px; left: -90.9px">
+              8
+            </div>
+            <div class="hour-text hour-9" style="top: 0px; left: -105px">9</div>
+            <div class="hour-text hour-10" style="top: -52.5px; left: -90.9px">
+              10
+            </div>
+            <div class="hour-text hour-11" style="top: -90.9px; left: -52.5px">
+              11
+            </div>
+            <div class="hour-text hour-12" style="top: -105px; left: 0px">
+              12
+            </div>
+          </div>
+          <div class="expand round circle-1"></div>
+          <div class="anchor hour" style="transform: rotate(412.359deg)">
+            <div class="element fat-hand"></div>
+          </div>
+          <div class="anchor minute" style="transform: rotate(4948.31deg)">
+            <div class="element fat-hand minute-hand"></div>
+          </div>
+          <div class="anchor second" style="transform: rotate(296898deg)">
+            <div class="element second-hand"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="weather-holder">
+      <div class="weather">
+        <h2 id="city"></h2>
+        <h1 id="temp"></h1>
+        <img id="codeIcon" src="" alt="" />
+        <h3 id="codeText"></h3>
+        <h3 id="minMaxTemp"></h3>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+    <script src="clock.js"></script>
+    <script src="weather.js"></script>
+  </body>
+</html>
