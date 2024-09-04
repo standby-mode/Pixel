@@ -8,7 +8,20 @@ body {
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  background-color: #3a8660;
+  background: #3a8660;
+  color: #fff;
+  overflow: hidden;
+}
+
+.body {
+  all: unset;
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background: #3a8660;
   color: #fff;
   overflow: hidden;
 }
